@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Mathieu\\Desktop\\epsi\\Android\\TP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rFR\\values-fr-rFR.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Mathieu\\Desktop\\epsi\\Android\\TP\\app\\src\\main\\res\\values-fr-rFR\\strings.xml",
+                    "from": {
+                        "startLines": "4,5,3,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "144,193,100,57",
+                        "endColumns": "47,49,42,41",
+                        "endOffsets": "187,238,138,94"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,103,153,196",
+                        "endColumns": "47,49,42,41",
+                        "endOffsets": "98,148,191,233"
+                    }
+                }
+            ]
+        }
+    ]
+}
