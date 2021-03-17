@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="77dp"
+        android:text="Largeur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hauteur"
+        app:layout_constraintStart_toStartOf="@+id/width"
+        app:layout_constraintTop_toBottomOf="@+id/width" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="150dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/width"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editwidth"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editheight"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="116dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginRight="216dp"
+        android:clickable="true"
+        android:onClick="buttonPressedAdd"
+        android:text="Dessiner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <Button
+        android:id="@+id/button_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:onClick="buttonPressedRemove"
+        android:text="Effacer"
+        app:layout_constraintBottom_toTopOf="@+id/calque_dessin"
+        app:layout_constraintEnd_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/position_horizontale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar1"
+        app:layout_constraintStart_toEndOf="@+id/seekBar1"
+        app:layout_constraintTop_toTopOf="@+id/seekBar1" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:indeterminate="false"
+        android:max="770"
+        android:orientation="horizontal"
+        android:progress="335"
+        app:layout_constraintBottom_toBottomOf="@+id/calque_dessin"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <TextView
+        android:id="@+id/position_verticale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar2"
+        android:layout_alignLeft="@+id/seekBar2"
+        android:layout_marginBottom="100dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar2"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/seekBar2" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="200dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginRight="284dp"
+        android:indeterminate="false"
+        android:max="290"
+        android:orientation="vertical"
+        android:progress="145"
+        android:rotation="90"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar1"
+        app:layout_constraintEnd_toEndOf="@+id/calque_dessin"
+        app:layout_constraintTop_toTopOf="@+id/calque_dessin"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <view
+        android:id="@+id/calque_dessin"
+        class="fr.epsi.montpellier.tp.GeometryLayer"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_remove" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

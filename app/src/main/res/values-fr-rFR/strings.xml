@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="width">Largeur</string>
+    <string name="height">Hauteur</string>
+    <string name="button_add">Dessiner</string>
+    <string name="button_remove">Effacer</string>
+</resources>
